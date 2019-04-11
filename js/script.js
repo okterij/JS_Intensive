@@ -270,6 +270,12 @@ modal.addEventListener('click', (e) => {
     }
 });
 
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 27) {
+        closeModal();
+    }
+});
+
 function createVideo() {
     var tag = document.createElement('script');
 
