@@ -4,7 +4,6 @@ const switcher = document.querySelector('#cbx'),
       videos = document.querySelectorAll('.videos__item'),
       videosWrapper = document.querySelector('.videos__wrapper');
 let player;
-//API_Key = 'AIzaSyCDijepcSNgbU43MZ2s8LbPEdKgdo77sew'
 
 function bindSlideTogle (trigger, boxBody, content, openClass){
     let button = {
@@ -117,7 +116,7 @@ switcher.addEventListener('change', () => {
 
 function start() {
     gapi.client.init({
-        'apiKey': 'AIzaSyCDijepcSNgbU43MZ2s8LbPEdKgdo77sew',
+        'apiKey': '',
         'discoveryDocs': ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"]
     }).then(function() {
         return gapi.client.youtube.playlistItems.list({
@@ -166,7 +165,7 @@ function start() {
 
 function search(target) {
     gapi.client.init({
-        'apiKey': 'AIzaSyCDijepcSNgbU43MZ2s8LbPEdKgdo77sew',
+        'apiKey': '',
         'discoveryDocs': ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"]
     }).then(function() {
         return gapi.client.youtube.search.list({
